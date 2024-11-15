@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtShare - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-container">
+            <div class="logoTitle">
+                <h1><img src="../img/logo.jpg" alt="logoImg" style="width: 40px;"> ArtShare</h1>
+            </div>
+            <p>Welcome!</p>
+            <p>Make it easy to create</p>
+            <br>
+            <div class="shadow-wrapper">
+                <div class="tab-container">
+                    <button class="tab active" id="signInTab" onclick="showTab('signIn')">Sign In</button>
+                    <button class="tab" id="signUpTab" onclick="showTab('signUp')">Sign Up</button>
+                </div>
+            </div>
+            
+            <!-- Sign In Form -->
+            <div id="signIn" class="form-container">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button class="btn-primary" id="continueBtn">Continue</button>
+            </div>
+            
+            <!-- Sign Up Form -->
+            <div id="signUp" class="form-container" style="display: none;">
+                <form id="signupForm">
+                    <input type="text" id="usernameInput" placeholder="Username" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="../img/placeholder.jpg" alt="Artwork">
+        </div>
+    </div>
+
+    <script>
+        // Show the selected tab (Sign In or Sign Up)
+        function showTab(tabName) {
+            document.getElementById("signIn").style.display = tabName === 'signIn' ? 'block' : 'none';
+            document.getElementById("signUp").style.display = tabName === 'signUp' ? 'block' : 'none';
+            document.getElementById("signInTab").classList.toggle("active", tabName === 'signIn');
+            document.getElementById("signUpTab").classList.toggle("active", tabName === 'signUp');
+        }
+
+        // Save username on Sign Up and redirect to main.html
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("usernameInput").value;
+            localStorage.setItem("username", username); // Save the username to local storage
+            window.location.href = "main.html"; // Redirect to main.html
+        });
+    </script>
+</body>
+</html>

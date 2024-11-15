@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtShare - Main</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logoTitle">
+            <a href="main.html" class="logoTitle">
+                <img src="../img/logo.jpg" alt="logoImg" style="width: 40px;">
+                <h6>ArtShare</h6>
+            </a>                
+        </div>
+        <section>
+            <form action="https://search.naver.com/search.naver">
+                <div class="search">
+                    <input type="text" name="query" value="">
+                    <button type="submit">검색</button>
+                </div>
+            </form>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="main.html" data-page="home"><b>Home</b></a></li>
+                <li><a href="profile.html" data-page="profile">Profile</a></li>
+                <li><a href="upload.html" data-page="upload">Upload Art</a></li>
+                <li>
+                    <div class="sc-pkfh0q-0 kYDpSN">
+                        <button id="profileToggleBtn" style="border-radius: 100%;">
+                            <div size="40" title="clsrn" role="img" class="sc-1asno00-0 hgXaOs">
+                                <img src="../img/profile.png" alt="clsrn">
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section class="profile" id="profileSection">
+            <div class="profile-header">
+                <a href="/users/87578765" class="profile-picture">
+                    <img src="../img/profile.png" alt="Profile Picture" class="profile-img">
+                </a>                
+                <div class="profile-info">
+                    <div title="user_hujr7453" class="sc-1utla24-0 sc-1dlbdn6-9 eePPDm bTUoFw profile-username">UserName</div>
+                    <p class="profile-id">UserEmail</p>
+                </div>
+            </div>
+            
+            <div class="profile-stats">
+                <a href="/users/87578765/following" class="profile-following">
+                    <span class="profile-number">0</span>
+                    <span>팔로우 중</span>
+                </a>
+                <a href="/users/87578765/followers" class="profile-followers">
+                    <span class="profile-number">0</span>
+                    <span>팔로워</span>
+                </a>
+            </div>
+            
+            <ul class="profile-menu">
+                <li><a href="/dashboard/works">내 작품</a></li>
+                <li><a href="/history.php">열람이력</a></li>
+                <li><a href="/novel/marker_all.php">책갈피</a></li>
+                <li><a href="/setting_user.php">설정</a></li>
+                <li><button>피드백 보내기</button></li>
+                <li><button>로그아웃</button></li>
+            </ul>
+            
+            <div class="profile-options">
+                <div class="language-select">
+                    <button>한국어</button>
+                </div>
+            </div>
+        </section>        
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#">Landscape</a></li>
+                <li><a href="#">Abstract</a></li>
+                <li><a href="#">Portrait</a></li>
+                <li><a href="#">Digital Art</a></li>
+                <li><a href="#">Photography</a></li>
+            </ul>
+        </aside>
+
+        <main class="art-feed">
+            <h2>Discover Art</h2>
+            <div class="art-grid">
+                <div class="art-item">Artwork 1</div>
+                <div class="art-item">Artwork 2</div>
+                <div class="art-item">Artwork 3</div>
+                <div class="art-item">Artwork 4</div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 ArtShare. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* General Reset and Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px; /* navbar 높이에 맞게 조정 */
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 1em 2em;
+    color: white;
+    width: 100%;
+    position: fixed; /* 추가 */
+    top: 0; /* 추가 */
+    z-index: 10; /* 다른 요소들보다 위에 표시되도록 추가 */
+}
+
+.logoTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 2.5rem;
+    color: #f4f4f4;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 100px; /* Adjust based on header height */
+    left: 0;
+    width: 200px;
+    background-color: #e0e0e0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 0.5em 0;
+}
+
+.sidebar ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: #0056b3;
+}
+
+/* Main Content Wrapper */
+.content-wrapper {
+    max-width: 800px;
+    margin: 2em auto;
+    padding-left: 220px; /* Offset for the fixed sidebar */
+}
+
+/* Main Container Styling */
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    flex-direction: column;  /* Align items in a column */
+    min-height: 80vh;        /* Take up most of the viewport height */
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Upload Section Styling */
+.upload-section h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.upload-form input[type="text"],
+.upload-form input[type="file"],
+.upload-form textarea {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #f4f4f4;
+    color: #777;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.image-preview {
+    margin-top: 1em;
+    width: 100%;          /* 전체 너비에 맞추어 */
+    max-width: 300px;     /* 최대 너비를 설정하여 화면을 벗어나지 않도록 */
+    max-height: 300px;    /* 최대 높이 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* 기본 배경색 */
+}
+
+.image-preview img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 비율을 유지하면서 이미지가 미리보기 영역에 맞도록 */
+}

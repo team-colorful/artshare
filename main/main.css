@@ -1,0 +1,282 @@
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Logo and Title */
+.logoTitle {
+    display: flex;
+    align-items: center; /* Horizontal alignment */
+    gap: 12px; /* Space between image and text */
+    font-size: 2.5rem;
+    color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 1em 2em;
+    color: white;
+    width: 100%;
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+}
+
+.search input {
+    width: calc(100% - 60px); /* Adjusted to fit button */
+    padding: 0.5em;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+}
+
+.search button {
+    width: 50px;
+    height: 36px;
+    font-size: 1rem;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #218838;
+}
+
+/* Adjust Navigation Links */
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    padding: 1em 2em;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #e0e0e0;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    margin-bottom: 1em;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 0.5em 0;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Art Feed */
+.art-feed {
+    flex: 1;
+    margin-left: 2em;
+}
+
+.art-feed h2 {
+    margin-bottom: 1em;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em;
+}
+
+.art-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #f4f4f4;
+    margin-top: 2em;
+    color: #777;
+}
+
+/* Content Area Fade-In Effect */
+#content-area {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#content-area.show {
+    opacity: 1;
+}
+/* Profile Section */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-username {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.profile-id {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 2em;
+    margin: 1em 0;
+}
+
+.profile-stats a {
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+}
+
+.profile-number {
+    font-weight: bold;
+}
+
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    gap: 0.5em;
+}
+
+.profile-menu li a, .profile-menu li button {
+    color: #333;
+    padding: 0.5em;
+    text-align: left;
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.profile-options {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+}
+
+.language-select button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+/* Move inline styles to CSS */
+.logoTitle img {
+    width: 40px;
+}
+
+.profile-picture img,
+.sc-1asno00-0 img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+}
+
+.profile-info .profile-username {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+#profileSection {
+    display: none;
+}
+
+#profileToggleBtn img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 이미지 둥글게 만들기 */
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* 이미지와 텍스트가 같은 높이에 위치하도록 정렬 */
+.sc-pkfh0q-2 {
+    display: flex;
+    align-items: center;
+}
+
+.logoTitle, nav ul li {
+    display: flex;
+    align-items: center;
+}
