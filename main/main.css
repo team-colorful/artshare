@@ -280,3 +280,15 @@ body {
     display: flex;
     align-items: center;
 }
+
+/* main.css */
+.sc-1asno00-0.hgXaOs img {
+    border: 1px solid #636363; /* 외곽선 두께 및 색상 설정 */
+    border-radius: 50%;       /* 원형으로 만들기 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가 (선택 사항) */
+    transition: transform 0.3s ease; /* 마우스 올릴 때 애니메이션 */
+}
+
+.sc-1asno00-0.hgXaOs img:hover {
+    transform: scale(1.1); /* 마우스 올릴 때 확대 효과 */
+}

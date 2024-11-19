@@ -13,14 +13,23 @@
             <a href="main.html" class="logoTitle">
                 <img src="../img/logo.jpg" alt="logoImg" style="width: 40px;">
                 <h6>ArtShare</h6>
-            </a>            
+            </a>                
         </div>
         <nav>
             <ul>
-                <li><a href="../main/main.html">Home</a></li>
-                <li><a href="../main/profile.html"><b>Profile</b></a></li>
-                <li><a href="../main/upload.html">Upload Art</a></li>
-
+                <li><a href="main.html" data-page="home"><b>Home</b></a></li>
+                <li><a href="upload.html" data-page="upload">Upload Art</a></li>
+                <li>
+                    <div class="sc-pkfh0q-0 kYDpSN">
+                        <a href="profile.html" id="profileImageLink">
+                            <button id="profileToggleBtn" style="border-radius: 100%; background: none; border: none; padding: 0;">
+                                <div size="40" title="clsrn" role="img" class="sc-1asno00-0 hgXaOs">
+                                    <img src="../img/profile.png" alt="clsrn">
+                                </div>
+                            </button>
+                        </a>
+                    </div>
+                </li>                
             </ul>
         </nav>
     </header>
@@ -29,20 +38,24 @@
     <div class="profile-container">
         <h2>My Profile</h2>
         <div class="profile-content">
-            <div class="profile-item">
-                <label for="profile-pic">Profile Picture:</label>
+            <div class="profile-picture-section">
+                <div class="profile-picture">
+                    <img src="../img/profile.png" alt="Profile Picture">
+                </div>
                 <input type="file" id="profile-pic" name="profile-pic">
             </div>
-            <div class="profile-item">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" value="Your Username">
-            </div>
-            <div class="profile-item">
-                <label for="bio">Bio:</label>
-                <textarea id="bio" name="bio" rows="4">A short bio about yourself</textarea>
-            </div>
-            <div class="profile-item">
-                <button class="save-btn">Save Changes</button>
+            <div class="profile-info-section">
+                <div class="profile-item">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="Your Username">
+                </div>
+                <div class="profile-item">
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Write something about yourself..."></textarea>
+                </div>
+                <div class="profile-item">
+                    <button class="save-btn">Save Changes</button>
+                </div>
             </div>
         </div>
     </div>

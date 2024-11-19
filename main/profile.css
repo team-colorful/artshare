@@ -1,30 +1,9 @@
-/* Reset styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Reset */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f9;
-    color: #333;
-}
-
-.white-box {
-	background: white;
-	padding: 20px;
-	border-radius: 5px;
-	box-shadow: 0.5px 0.5px 2px 1px #eee;
-}
-.logoTitle {
-    display: flex;
-    align-items: center; /* 수평 정렬 */
-    text-align: center;
-    align-items: center; /* 이미지와 텍스트 수평 맞춤 */
-    gap: 12px; /* 이미지와 텍스트 사이 간격 */
-    font-size: 2.5rem;
-    color: #f4f4f4;
 }
 
 /* Navigation Bar */
@@ -32,90 +11,140 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #007bff;
-    padding: 1em 2em;
-    color: white;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 1em;
-}
-
-.navbar nav ul li a {
-    color: white;
-    text-decoration: none;
+.navbar .logoTitle h6 {
+    margin: 0;
+    color: #fff;
+    font-size: 18px; /* 크기 통일 */
     font-weight: bold;
+}
+
+.navbar .logoTitle img {
+    width: 35px; /* 크기 통일 */
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Logo and Title */
+.logoTitle {
+    display: flex;
+    align-items: center; /* Horizontal alignment */
+    gap: 12px; /* Space between image and text */
+    font-size: 2.5rem;
+    color: #f4f4f4;
 }
 
 /* Profile Container */
 .profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2em;
-    padding: 1em;
-    background-color: #fff;
-    width: 50%;
-    margin: 2em auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .profile-container h2 {
-    margin-bottom: 1em;
-    color: #007bff;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.profile-content {
-    width: 100%;
+/* Profile Picture Section */
+.profile-picture-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Profile Picture Section */
+.profile-picture img {
+    width: 100px; /* 줄인 크기 */
+    height: 100px;
+    border-radius: 50%; /* 원형 유지 */
+    border: 2px solid #007BFF; /* 테두리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 */
+    transition: transform 0.3s ease; /* 마우스 올릴 때 애니메이션 */
+}
+
+.profile-picture img:hover {
+    transform: scale(1.1); /* 마우스 올릴 때 확대 효과 */
+}
+
+/* Profile Info Section */
+.profile-info-section {
+    margin: 0 20px;
 }
 
 .profile-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5em;
+    margin-bottom: 15px;
 }
 
 .profile-item label {
+    display: block;
     font-weight: bold;
-    margin-bottom: 0.5em;
+    margin-bottom: 5px;
+    color: #555;
 }
 
-.profile-item input[type="text"],
-.profile-item input[type="file"],
+.profile-item input,
 .profile-item textarea {
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 1rem;
+    box-sizing: border-box;
 }
 
-textarea {
-    resize: none;
-}
-
-.save-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
+.profile-item button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
     border: none;
-    color: white;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 1rem;
-    align-self: center;
-    margin-top: 1em;
-}
-.profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
+    transition: background-color 0.3s;
 }
 
-.preview-container img {
-    max-width: 200px; /* Set maximum width to control preview size */
-    border-radius: 50%; /* Circular preview */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.profile-item button:hover {
+    background-color: #0056b3;
+}
+
+/* main.css - Profile Image Styling */
+.sc-1asno00-0.hgXaOs img {
+    width: 40px; /* 동일한 크기 유지 */
+    height: 40px;
+    border: 1px solid #636363; /* 외곽선 두께 및 색상 설정 */
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+    transition: transform 0.3s ease;
+}
+
+.sc-1asno00-0.hgXaOs img:hover {
+    transform: scale(1.1);
 }
