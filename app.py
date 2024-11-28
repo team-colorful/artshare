@@ -11,4 +11,4 @@ HOST_DEBUG = bool(os.getenv('HOST_DEBUG'))
 app = Flask(__name__)
 
 if __name__ == '__main__':
-    app.run(port=os.getenv('PORT'), debug=True)
+    app.run(host=HOST_IP, port=HOST_PORT, debug=HOST_DEBUG)

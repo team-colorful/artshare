@@ -1,0 +1,13 @@
+[Unit]
+Description=2024 웹프실 수행평가. 그림 공유 커뮤니티
+Documentation=https://github.com/team-colorful/artshare
+After=network.target
+
+[Service]
+ExecStart=/bin/sudo /bin/bash /home/szkot/artshare/stater.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+    
