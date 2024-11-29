@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, send_file, redirect, url_for, request, session
 import src.utils as utils
 import src.config as config
+import src.modules.user as userctl
 
 user_bp = Blueprint('user', __name__, url_prefix='/user')
 
